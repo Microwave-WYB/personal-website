@@ -17,4 +17,6 @@ export MISE_CEILING_PATHS="$(dirname "$PWD")"
 
 mise trust "$PWD/mise.toml" --yes
 mise install --monorepo
-mise run site
+# Cloudflare may restore generated outputs with newer timestamps than freshly
+# cloned sources. Force the full graph so the CV and site are never stale.
+mise run --force site
