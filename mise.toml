@@ -1,10 +1,19 @@
+# The repository is a mise monorepo. `cv/` is an independent config root
+# with its own tools and tasks, available as `//cv:<task>`.
+monorepo_root = true
+
+[monorepo]
+config_roots = ["cv"]
+lockfile = true
+
 [tools]
 zola = "0.23.3"
 
 [tasks.cv]
-description = "Build the CV package and copy its PDF into the website assets"
-run = "mise -C cv run build && cp cv/build/yibo-wei-cv.pdf static/yibo-wei-cv.pdf"
-sources = ["cv/**/*"]
+description = "Copy the CV workspace artifact into the website assets"
+depends = ["//cv:build"]
+run = "cp cv/build/yibo-wei-cv.pdf static/yibo-wei-cv.pdf"
+sources = ["cv/build/yibo-wei-cv.pdf"]
 outputs = ["static/yibo-wei-cv.pdf"]
 
 [tasks.site]
