@@ -7,8 +7,12 @@ if ! command -v mise >/dev/null 2>&1; then
   export PATH="$HOME/.local/bin:$PATH"
 fi
 
-mise trust --all --yes
-# Install the union of tools declared by this monorepo and its explicit
-# workspace config roots (`.` and `cv/`).
+# Ignore build-image-wide mise settings. They can declare unrelated tools
+# (for example dart-sass-embedded) that are not part of this repository.
+export MISE_GLOBAL_CONFIG_FILE=/dev/null
+export MISE_SYSTEM_CONFIG_DIR=/nonexistent
+
+# These repository configs contain only plain tools and tasks, so mise does
+# not require a trust prompt in CI.
 mise install --monorepo
 mise run site
