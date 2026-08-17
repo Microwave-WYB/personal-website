@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# Cloudflare injects this legacy tool-version variable into Pages builds.
+# mise interprets every MISE_<TOOL>_VERSION variable as a requested tool,
+# but dart-sass-embedded is not part of this repository or mise's registry.
+unset MISE_DART_SASS_EMBEDDED_VERSION
+
 # Cloudflare Pages does not provide mise by default.
 if ! command -v mise >/dev/null 2>&1; then
   curl https://mise.run | sh
