@@ -8,6 +8,8 @@ if ! command -v mise >/dev/null 2>&1; then
 fi
 
 mise trust --all --yes
-mise install
-mise -C cv install
+# Install only this repository's build tools. Cloudflare's build image may
+# include unrelated mise configuration, so `mise install` without arguments
+# can attempt to install tools outside this project.
+mise install zola@0.23.3 typst@0.15.1
 mise run site
