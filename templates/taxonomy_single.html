@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}{{ term.name }} | {{ config.title }}{% endblock title %}
+{% block content %}
+  <section class="section-intro">
+    <p class="eyebrow">Tag</p>
+    <h1>{{ term.name }}</h1>
+  </section>
+  <div class="post-list">
+    {% for post in term.pages %}
+      <article class="post-preview">
+        <p class="eyebrow">{{ post.date | date(format="%B %-d, %Y") }}</p>
+        <h2><a href="{{ post.permalink | safe }}">{{ post.title }}</a></h2>
+        {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+      </article>
+    {% endfor %}
+  </div>
+{% endblock content %}

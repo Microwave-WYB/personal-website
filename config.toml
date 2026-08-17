@@ -1,0 +1,14 @@
+base_url = "https://yibo-wei.com"
+title = "Yibo Wei"
+description = "Research, projects, and notes by Yibo Wei."
+default_language = "en"
+compile_sass = false
+build_search_index = false
+
+taxonomies = [
+  { name = "tags", feed = true },
+]
+
+[extra]
+github = "https://github.com/Microwave-WYB"
+linkedin = "https://www.linkedin.com/in/yibo-wei-05616322a/"

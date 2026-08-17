@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}{{ section.title }} | {{ config.title }}{% endblock title %}
+{% block description %}{{ section.description | default(value=config.description) }}{% endblock description %}
+
+{% block content %}
+  <section class="section-intro">
+    <h1>{{ section.title }}</h1>
+    {% if section.content %}<div class="content">{{ section.content | safe }}</div>{% endif %}
+  </section>
+
+  {% if section.pages %}
+    <div class="post-list">
+      {% for post in section.pages %}
+        <article class="post-preview">
+          <p class="eyebrow">{{ post.date | date(format="%B %-d, %Y") }}</p>
+          <h2><a href="{{ post.permalink | safe }}">{{ post.title }}</a></h2>
+          {% if post.description %}<p>{{ post.description }}</p>{% elif post.summary %}<div>{{ post.summary | safe }}</div>{% endif %}
+          {% if post.taxonomies.tags %}
+            <ul class="tags" aria-label="Tags">
+              {% for tag in post.taxonomies.tags %}
+                <li><a href="{{ get_taxonomy_url(kind='tags', name=tag) }}">{{ tag }}</a></li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </article>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p class="empty-state">No posts yet. Check back soon.</p>
+  {% endif %}
+{% endblock content %}

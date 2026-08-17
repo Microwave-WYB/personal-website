@@ -1,0 +1,24 @@
+[tools]
+zola = "0.23.3"
+
+[tasks.cv]
+description = "Build the CV package and copy its PDF into the website assets"
+run = "mise -C cv run build && cp cv/build/yibo-wei-cv.pdf static/yibo-wei-cv.pdf"
+sources = ["cv/**/*"]
+outputs = ["static/yibo-wei-cv.pdf"]
+
+[tasks.site]
+description = "Build the complete production website"
+depends = ["cv"]
+run = "zola build"
+sources = ["config.toml", "content/**/*", "static/**/*", "templates/**/*"]
+outputs = ["public"]
+
+[tasks.serve]
+description = "Build the CV and run Zola's local development server"
+depends = ["cv"]
+run = "zola serve"
+
+[tasks.clean]
+description = "Remove generated website and copied CV files"
+run = "rm -rf public static/yibo-wei-cv.pdf"

@@ -1,0 +1,16 @@
+[tools]
+typst = "0.15.1"
+
+[tasks.build]
+description = "Build the CV PDF"
+run = "mkdir -p build && typst compile yibo-wei.typ build/yibo-wei-cv.pdf"
+sources = ["**/*.typ"]
+outputs = ["build/yibo-wei-cv.pdf"]
+
+[tasks.watch]
+description = "Watch the Typst source and rebuild the CV PDF"
+run = "mkdir -p build && typst watch yibo-wei.typ build/yibo-wei-cv.pdf"
+
+[tasks.clean]
+description = "Remove the generated CV PDF"
+run = "rm -rf build"
