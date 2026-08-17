@@ -2,10 +2,11 @@
 #show link: underline
 
 #set page(
-  margin: (x: 0.9cm, y: 1.3cm),
+  margin: (x: 0.9cm, y: 1.2cm),
 )
 
-#set par(justify: true)
+#set par(justify: true, leading: 0.55em)
+#set list(spacing: 0.55em)
 
 #let chiline() = {v(-3pt); line(length: 100%); v(-5pt)}
 
@@ -51,7 +52,7 @@ B.S. in Computer Science and Engineering #h(1fr) La Jolla, CA
 #link("https://bleauto.sysnet.ucsd.edu/")[*BLE Theft Auto: Evaluating the Security of Aftermarket BLE-based Automotive Remote Control Systems*] \
 *35th USENIX Security Symposium; presented at DEF CON 34* #h(1fr) 2026
 - Co-led the study of pairing, authentication, and encryption in 6 aftermarket BLE vehicle-control systems, identifying critical vulnerabilities in 3 that expose an estimated 2.9 million vehicles
-- Developed reverse-engineering and proof-of-concept tooling to analyze custom application-layer security protocols
+- Reverse engineered custom application-layer security protocols and implemented attacks demonstrating unauthorized vehicle control
 - Engineered a deterministic, end-to-end source-to-paper build system using *DVC* and *mise*, reproducing the complete paper and its artifacts from versioned inputs; awarded all 3 USENIX artifact badges
 - Coordinated responsible disclosure with affected vendors, prompting security improvements to a widely deployed system
 
