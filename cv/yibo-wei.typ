@@ -11,10 +11,12 @@
 
 = Yibo Wei
 
-y2wei\@ucsd.edu | (+1) 858-642-5282 |
+y2wei\@ucsd.edu |
 #link("https://github.com/Microwave-WYB")[github.com/Microwave-WYB] |
 #link("https://linkedin.com/in/yibo-wei-05616322a")[LinkedIn] |
 9500 Gilman Drive
+
+I am a PhD student at UC San Diego focusing on IoT security, automotive security, and cybersecurity. I design and build scalable systems from scratch to support real-world security measurement, analysis, and evaluation.
 
 == Education
 #chiline()
@@ -28,60 +30,43 @@ B.S. in Computer Science and Engineering #h(1fr) La Jolla, CA
 == Skills
 #chiline()
 
-*Languages:* Python, C/C++, Kotlin, TypeScript, Rust, Shell
+*Languages:* Python, Rust, C/C++
 
-*Backend Stack:* FastAPI, Docker, Redis, PostgreSQL, CI/CD, SQLModel, Android Development
+*Systems & Data:* Polars, PostgreSQL/PostGIS, Docker, Android Development
 
-*Systems & Security:* Reverse Engineering, Vulnerability Assessment, BLE Security, Protocol Design, Network Engineering
+*Security:* Android Reverse Engineering, .NET Reverse Engineering, Ghidra, BLE Protocol Analysis
 
-== Research Experience
+== Professional Experience
 #chiline()
 
-I am a PhD student specializing in systems and security research. My work focuses on developing scalable infrastructures for security analysis. I have extensive experience in back-end service development, mobile development, and security vulnerability assessment. My technical expertise includes reverse engineering embedded systems, automated security testing, and full-stack research infrastructure development. I am particularly interested in the intersection of mobile sensing, distributed computing, and security analysis.
+*Zoox: Software Engineer Intern, Firmware Tools* #h(1fr) June 2026 to Sept. 2026 \
+- Built data pipelines that transform raw vehicle firmware validation outputs into *Delta Lake* tables on *Amazon S3* and *Databricks*
+- Identified a *security vulnerability* in the course of firmware-tools development and coordinated *responsible disclosure* with the Product Security team for investigation and remediation
+- Structured validation data to accelerate failure investigation, classification, and root-cause triage
+- Established a data foundation for faster build-failure analysis and future automated triage tooling
 
-*Security Research & Vulnerability Assessment: Automotive Systems* #h(1fr) Oct. 2024 \
-- Led comprehensive critical security research on automotive Bluetooth Low Energy (BLE) systems, uncovering multiple high-severity vulnerabilities that could affect millions of vehicles worldwide
-- Leveraged advanced skill set in reverse engineering, static code analysis, Python, C\#, and BLE protocol analysis to develop specialized security assessment tools and methodologies
-- Engineered custom binary analysis framework for .NET applications streamlining the security assessment process
-- Discovered and documented critical authentication bypass vulnerabilities through systematic protocol analysis, potentially preventing unauthorized vehicle access
-- Engineered proof-of-concept Python CLI tool that successfully demonstrated critical authentication vulnerabilities, enabling unauthorized vehicle access through BLE protocol exploitation
-- Authored comprehensive technical documentation and remediation strategies, facilitating responsible disclosure.
-
-== Projects
+== Publications
 #chiline()
 
-*Python API for Apple Geolocation Service* #h(1fr) May 2024 \
-#link("https://github.com/Microwave-WYB/gsloc")[github.com/Microwave-WYB/gsloc] \
-- Reverse engineered Apple's internal geolocation API and developed an open-source Python wrapper, enabling programmatic access to WiFi access point location data via BSSID queries
-- Engineered robust protocol parsing using *ProtoBuf*, ensuring reliable data serialization and API compatibility
-- Automated deployment pipeline using GitHub Actions for seamless *PyPI* distribution
-- Maintained comprehensive documentation and example code, facilitating easy integration for third-party developers
+#link("https://bleauto.sysnet.ucsd.edu/")[*BLE Theft Auto: Evaluating the Security of Aftermarket BLE-based Automotive Remote Control Systems*] \
+*35th USENIX Security Symposium; presented at DEF CON 34* #h(1fr) 2026
+- Co-led the study of pairing, authentication, and encryption in 6 aftermarket BLE vehicle-control systems, identifying critical vulnerabilities in 3 that expose an estimated 2.9 million vehicles
+- Developed reverse-engineering and proof-of-concept tooling to analyze custom application-layer security protocols
+- Engineered a deterministic, end-to-end source-to-paper build system using *DVC* and *mise*, reproducing the complete paper and its artifacts from versioned inputs; awarded all 3 USENIX artifact badges
+- Coordinated responsible disclosure with affected vendors, prompting security improvements to a widely deployed system
 
-*Scalable Audio Processing Infrastructure: Bird Species Identification* #h(1fr) Mar. 2024 to June 2024 \
-#link("https://github.com/Microwave-WYB/phone-sensors")[github.com/Microwave-WYB/phone-sensors] \
-- Architected and implemented a production-grade platform for collecting, processing and analyzing bird call audio data
-- Designed highly reliable backend using *FastAPI*, *Redis*, and *PostgreSQL* with 99.9% uptime since deployment
-- Implemented comprehensive monitoring ensuring stable 24/7 operation
-- Developed efficient async processing pipeline for audio analysis with automated error recovery
-- Orchestrated containerized deployment using *Docker*, maintaining consistent performance in production environment
+== Research Projects
+#chiline()
 
-*Security Research Infrastructure Engineer: BLE/Mobile Security* #h(1fr) Feb. 2024 to Present \
-- Architected and implemented comprehensive BLE security scanning infrastructure managing 2,676,640 BLE advertisements globally, enabling vulnerability research that led to discovery of multiple vulnerabilities
-- Developed resilient backend architecture leveraging *FastAPI*, *SQLModel*, and *PostgreSQL*, with *Redis Queue* for asynchronous processing, containerized with *Docker*, and CI/CD pipeline with *GitHub Actions*
-- Built high-availability system with 99.99% uptime since deployment
-- Engineered real-time analytics dashboard visualizing critical security metrics, device relationships, and threat patterns
-- Pioneered novel algorithms for mapping BLE device-to-application relationships
-- Implemented application-level encryption between API server and client applications to ensure data security independent of cloud storage
+*VAAS (Victim as a Service): LLM Scam Honeypot* #h(1fr) Mar. 2026 to Present \
+- Built an LLM-driven automated honeypot platform for studying social-media scams and collecting scam interaction data
+- Implemented the backend entirely in *Rust* with a *Vite* frontend for operating the research platform
+- Designed the system to support repeatable analysis of scam strategies and interaction patterns
 
-*Embedded System Design: Motion-Aware BLE Tracker* #h(1fr) Fall 2023 \
-- Designed and implemented power-efficient *BLE* tag prototype inspired by Apple AirTag architecture
-- Built hardware system integrating *STM32* microcontroller with gyroscope sensor through *I2C* interface and BLE module
-- Engineered adaptive BLE broadcasting algorithm triggered by motion state, optimizing for both findability and power efficiency
-- Achieved 74mA power consumption through careful power management and state transitions
-- Awarded 1st place in class competition for exceptional power efficiency metrics
-
-*High-Performance IP Router Implementation* #h(1fr) Sept. 2022 to March 2023 \
-- Architected and implemented a high-performance network router in *C*
-- Engineered an optimized longest prefix matching algorithm
-- Secured 1st place in competitive performance evaluation among 100+ implementations
-- Received the #link("https://cns.ucsd.edu/cns-espresso-prize-for-excellence-in-networking-3/")[George Varghese UCSD CSE Espresso Award]
+*Cluetooth: BLE Security Research Infrastructure* #h(1fr) Feb. 2024 to Present \
+- Architected an end-to-end BLE collection and analysis platform managing more than 10 million advertisements globally and supporting research that led to the discovery of multiple vulnerabilities
+- Built an Android scanner with its core data-processing pipeline written entirely in *Rust*, using *Polars* for high-efficiency processing of BLE advertisements
+- Implemented a *Rust*-based Lua scripting interface for defining custom BLE central and peripheral behavior, turning the Android app into a programmable universal BLE remote and peripheral
+- Designed a scalable storage pipeline using *Firestore* and Parquet datasets hosted on *Google Cloud Storage*
+- Developed a standalone *Python* ingest job using *Polars* for high-throughput transformation and loading of collected BLE data
+- Defined the separate *PostgreSQL* and *PostGIS* database through version-controlled migrations, enabling reliable schema evolution and geolocation queries with OpenStreetMap data
