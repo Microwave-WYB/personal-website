@@ -50,7 +50,7 @@ B.S. in Computer Science and Engineering #h(1fr) La Jolla, CA
 #chiline()
 
 #link("https://bleauto.sysnet.ucsd.edu/")[*BLE Theft Auto: Evaluating the Security of Aftermarket BLE-based Automotive Remote Control Systems*] \
-*35th USENIX Security Symposium; presented at DEF CON 34* #h(1fr) 2026
+*35th USENIX Security*; *DEF CON 34*; #link("https://www.cve.org/CVERecord?id=CVE-2026-18411")[*CVE-2026-18411*] #h(1fr) 2026
 - Co-led the study of pairing, authentication, and encryption in 6 aftermarket BLE vehicle-control systems, identifying critical vulnerabilities in 3 that expose an estimated 2.9 million vehicles
 - Reverse engineered custom application-layer security protocols and implemented attacks demonstrating unauthorized vehicle control
 - Engineered a deterministic, end-to-end source-to-paper build system using *DVC* and *mise*, reproducing the complete paper and its artifacts from versioned inputs; awarded all 3 USENIX artifact badges

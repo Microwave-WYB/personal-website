@@ -19,7 +19,7 @@ I am a PhD student at the University of California San Diego (UCSD), with broad 
 
 ### [BLE Theft Auto: Evaluating the Security of Aftermarket BLE-based Automotive Remote Control Systems](https://bleauto.sysnet.ucsd.edu/)
 
-Jerry Yu*, Yibo Wei*, Sumanth Rao, Mohak Vaswani, Jefferson Chien, Christian Dameff, Nishant Bhaskar, and Aaron Schulman. *35th USENIX Security Symposium (USENIX Security 26)*, 2026. [PDF](https://cseweb.ucsd.edu/~schulman/docs/sec26-bletheftauto.pdf)
+Jerry Yu*, Yibo Wei*, Sumanth Rao, Mohak Vaswani, Jefferson Chien, Christian Dameff, Nishant Bhaskar, and Aaron Schulman. *35th USENIX Security Symposium (USENIX Security 26)*, 2026. [PDF](https://cseweb.ucsd.edu/~schulman/docs/sec26-bletheftauto.pdf) · [CVE-2026-18411](https://www.cve.org/CVERecord?id=CVE-2026-18411)
 
 \* Equal contribution.
 
