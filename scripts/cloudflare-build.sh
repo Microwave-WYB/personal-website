@@ -9,7 +9,11 @@ fi
 
 # Ignore build-image-wide mise settings. They can declare unrelated tools
 # (for example dart-sass-embedded) that are not part of this repository.
-export MISE_GLOBAL_CONFIG_FILE=/dev/null
+# Recent mise versions require the global config path to have a supported
+# extension, so use an empty temporary TOML file instead of /dev/null.
+MISE_GLOBAL_CONFIG_FILE="$(mktemp "${TMPDIR:-/tmp}/mise-global.XXXXXX.toml")"
+export MISE_GLOBAL_CONFIG_FILE
+trap 'rm -f "$MISE_GLOBAL_CONFIG_FILE"' EXIT
 export MISE_SYSTEM_CONFIG_DIR=/nonexistent
 # Stop config discovery before mise reaches Cloudflare's build-home config.
 # The ceiling directory itself is excluded, while this repository remains loaded.
