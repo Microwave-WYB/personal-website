@@ -7,6 +7,8 @@ description = "Research interests, selected projects, and contact information fo
 
 I am a PhD student at the University of California San Diego (UCSD), with broad interests in IoT, automotive, and cybersecurity research. I am advised by [Aaron Schulman](https://cseweb.ucsd.edu/~schulman/). I am interested in understanding real-world security problems and developing practical ways to address them.
 
+I also enjoy building reliable and scalable systems for research in cybersecurity. For my BLE security research, I built an end-to-end platform for collecting, organizing, and analyzing Bluetooth data at scale. It supports repeatable experiments and helps turn observations from real-world systems into practical security findings.
+
 ## News
 
 - **Aug. 2026:** Presented *BLE Theft Auto* at DEF CON 34.
